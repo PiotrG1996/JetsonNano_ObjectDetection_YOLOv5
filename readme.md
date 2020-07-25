@@ -25,7 +25,7 @@ section. In this project, I decided not to apply any pre-trained and
 optimized model from the tutorials but take a closer look at the YOLO (You Only Look Once) algorithm.
 
 Although, [GitHub](https://github.com/dusty-nv/jetson-inference) is the best place to familiarize users with the coding on Jetson
-Nano. Figure 1. shown below presents a Jetson Nano device.
+Nano. Image shown below presents a Jetson Nano device.
 
 
 <img src="img/jetson.png"
@@ -168,7 +168,7 @@ defined as a correctly predicted percentage of images.
 Furthermore, recall only
 measures positive cases from the prediction. Average Precision is an integral of
 the area under precision-recall curve. In other words, it defines accuracy of the
-trained model. As well figure 5. as figure 6. presents successfully trained models.
+trained model. As well figure 3. as figure 4. presents successfully trained models.
 The difference is that the larger architecture of YOLO demands 5 times more
 training time than the smaller one.
 
