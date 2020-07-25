@@ -107,7 +107,7 @@ augmentation.
 <img src="img/labelling.jpg"
      alt="Markdown Monster icon"
      style="width: 300px; height: 300px; text-align: center;" /> </center>
-<center>     Figure 1. YOLOv5s batch size - 16, epochs - 100, training time - 10 minutes</center>
+<p align=center> YOLOv5s batch size - 16, epochs - 100, training time - 10 minutes</p>
 </br>
 
 ## Training
@@ -152,13 +152,13 @@ the area of taken into account shapes and is a good indicator of a loss function
 <img src="img/5s10min.png"
      alt="Markdown Monster icon"
      style="width: 100%; height: 300px; text-align: center;" />
-<center>     Figure 1. YOLOv5s batch size - 16, epochs - 100, training time - 10 minutes</center>
+<p align=center>    Figure 1. YOLOv5s batch size - 16, epochs - 100, training time - 10 minutes</p>
 </br>
 
 <img src="img/5x22min.png"
      alt="Markdown Monster icon"
      style="width: 100%; height: 300px; text-align: center;" />
-<center>     Figure 2. YOLOv5x batch size - 8, epochs - 100, training time - 22 minutes</center>
+<p align=center>     Figure 2. YOLOv5x batch size - 8, epochs - 100, training time - 22 minutes</p>
 </br>
 
 Whereas, mAP - mean Average Precision measures the accuracy of the examined
@@ -177,13 +177,13 @@ training time than the smaller one.
 <img src="img/5s2h30min.png"
      alt="Markdown Monster icon"
      style="width: 100%; height: 300px; text-align: center;" />
-<center>Figure 3. YOLOv5s batch size - 32, epochs - 3000, training time - 2.25 hours</center>
+<p align=center> Figure 3. YOLOv5s batch size - 32, epochs - 3000, training time - 2.25 hours</p>
 </br>
 
 <img src="img/5x10h30min.png"
      alt="Markdown Monster icon"
      style="width: 100%; height: 300px; text-align: center;" />
-<center>     Figure 4. YOLOv5x batch size - 6, epochs - 3000, training time - 10.5 hours </center>
+<p align=center>     Figure 4. YOLOv5x batch size - 6, epochs - 3000, training time - 10.5 hours </p>
 </br>
 
 
