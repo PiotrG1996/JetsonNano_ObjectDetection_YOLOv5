@@ -220,10 +220,12 @@ high precision, because all images consisted of this object sort.
 
 ## Results
 
-Solarized dark             |  Solarized Ocean
+Yolov5s 100 epochs             |  Yolov5s 3000 epochs
 :-------------------------:|:-------------------------:
 ![Yolov5s 100 epochs](img/example_yolov5s100epochs.png)  |  ![Yolov5s 3000 epochs](img/example_yolov5s3000epochs.png)
+
 </br>
-Solarized dark             |  Solarized Ocean
+
+Yolov5x 100 epochs             |  Yolov5x 3000 epochs
 :-------------------------:|:-------------------------:
 ![Yolov5x 100 epochs](img/example_yolov5x100epochs.png)  |  ![Yolov5x 3000 epochs](img/example_yolov5x3000epochs.png)
