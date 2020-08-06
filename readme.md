@@ -217,3 +217,13 @@ Additionally, I noticed that by the increasing numbers of iterations during
 training, the tendency of detecting is focused only on the entire object. In other
 words, it is going to detect only fully filled 1.25l Coca-Cola plastic bottles with
 high precision, because all images consisted of this object sort.
+
+## Results
+
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![Yolov5s 100 epochs](img/example_yolov5s100epochs.png)  |  ![Yolov5s 3000 epochs](img/example_yolov5s3000epochs.png)
+</br>
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![Yolov5x 100 epochs](img/example_yolov5x100epochs.png)  |  ![Yolov5x 3000 epochs](img/example_yolov5x3000epochs.png)
