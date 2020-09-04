@@ -209,7 +209,7 @@ Tests done on Jetson Nano demonstrated practical usage on this embedded
 platform. Accuracy remains generally the same either on a desktop machine or
 Jetson Nano device. The only significant difference is the speed performance.
 Stable 100 fps using a small version of yolov5 and 30 fps of extra-large version
-dropped down to 20 fps on yolov5s and 1.6 fps on yolov5x respectively. This
+dropped down respectively to 15 fps on yolov5s and 1.6 fps on yolov5x. This
 showcase makes an enormous difference by matching 472 GFLOPs on Jetson
 Nano GPU to 8873 GFLOPs on Nvidia GTX 1080 graphics card.
 
