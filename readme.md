@@ -24,7 +24,7 @@ Every specific problem regarding Jetson Nano can be reported in the issues
 section. In this project, I decided not to apply any pre-trained and
 optimized model from the tutorials but take a closer look at the YOLO (You Only Look Once) algorithm.
 
-Although, [GitHub](https://github.com/dusty-nv/jetson-inference) is the best place to familiarize users with the coding on Jetson
+Although, [GitHub](https://github.com/dusty-nv/jetson-inference) is the best place to familiarize users with coding on Jetson
 Nano. Image shown below presents a Jetson Nano device.
 
 
