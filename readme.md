@@ -38,7 +38,7 @@ Figure 1. Jetson Nano module integrated in the board B01
 
 </br>
 <p align="center">
-  <img width="460" height="450" src="img/B01.png">
+  <img width="800" height="450" src="img/B01.png">
 </p>
 <p align="center">
 Figure 2. Board B01 designed by NVIDIA
@@ -246,7 +246,7 @@ Synthetic Data is the data generated through computer programs such as Blender, 
 
 </br>
 <p align="center">
-  <img width="460" height="450" src="img/Synthetic_data.png">
+  <img width="900" height="450" src="img/Synthetic_data.png">
 </p>
 <p align="center">
 Figure 8. Synthetic Data usage in the future
