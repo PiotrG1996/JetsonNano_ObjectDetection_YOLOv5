@@ -32,7 +32,7 @@ Nano. Image shown below presents a Jetson Nano device.
   <img width="460" height="450" src="img/jetson.png">
 </p>
 <p align="center">
-Figure 1. Jetson Nano module integrated in the board B01 
+Figure 1. Jetson Nano module integrated on the board B01 
 </p>
 </br>
 
@@ -54,8 +54,23 @@ Figure 2. Board B01 designed by NVIDIA
 7. DisplayPort connector
 8. DC Barrel jack for 5V power input
 9. MIPI CSI camera connectors
+10. Antmicro project: [GitHub Link](https://github.com/antmicro/jetson-nano-baseboard)
 
+</br>
+<p align="center">
+  <img width="560" height="450" src="img/jetson-nano-baseboard.png">
+</p>
+<p align="center">
+Figure 3. Jetson Nano module integrated on the Antmcro's baseboard 
+</p>
+</br>
 
+<p align="center">
+  <img width="900" height="650" src="img/jetson-nano-layout.png">
+</p>
+<p align="center">
+Figure 4. Baseboard designed by Antmicro 
+</p>
 
 ## Image dataset
 
@@ -116,7 +131,7 @@ augmentation.
 </br>
 <p align="center">
   <img width="900" height="600" src="img/labelling.jpg">
-<p align=center> Figure 3. YOLOv5s batch_size: 16, epochs: 100, training time: 10 minutes</p>
+<p align=center> Figure 5. YOLOv5s batch_size: 16, epochs: 100, training time: 10 minutes</p>
 </br>
 
 ## Training
@@ -161,13 +176,13 @@ the area of taken into account shapes and is a good indicator of a loss function
 <img src="img/5s10min.png"
      alt="Markdown Monster icon"
      style="width: 100%; height: 300px; text-align: center;" />
-<p align=center>    Figure 4. YOLOv5s batch size - 16, epochs - 100, training time - 10 minutes</p>
+<p align=center>    Figure 6. YOLOv5s batch size - 16, epochs - 100, training time - 10 minutes</p>
 </br>
 
 <img src="img/5x22min.png"
      alt="Markdown Monster icon"
      style="width: 100%; height: 300px; text-align: center;" />
-<p align=center>     Figure 5. YOLOv5x batch size - 8, epochs - 100, training time - 22 minutes</p>
+<p align=center>     Figure 7. YOLOv5x batch size - 8, epochs - 100, training time - 22 minutes</p>
 </br>
 
 Whereas, mAP - mean Average Precision measures the accuracy of the examined
@@ -186,13 +201,13 @@ training time than the smaller one.
 <img src="img/5s2h30min.png"
      alt="Markdown Monster icon"
      style="width: 100%; height: 300px; text-align: center;" />
-<p align=center> Figure 6. YOLOv5s batch size - 32, epochs - 3000, training time - 2.25 hours</p>
+<p align=center> Figure 8. YOLOv5s batch size - 32, epochs - 3000, training time - 2.25 hours</p>
 </br>
 
 <img src="img/5x10h30min.png"
      alt="Markdown Monster icon"
      style="width: 100%; height: 300px; text-align: center;" />
-<p align=center>     Figure 7. YOLOv5x batch size - 6, epochs - 3000, training time - 10.5 hours </p>
+<p align=center>     Figure 9. YOLOv5x batch size - 6, epochs - 3000, training time - 10.5 hours </p>
 </br>
 
 
@@ -249,7 +264,7 @@ Synthetic Data is the data generated through computer programs such as Blender, 
   <img width="900" height="450" src="img/Synthetic_data.png">
 </p>
 <p align="center">
-Figure 8. Synthetic Data usage in the future
+Figure 10. Synthetic Data usage in the future
 </p>
 </br>
 
