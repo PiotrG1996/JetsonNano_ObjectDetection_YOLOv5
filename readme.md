@@ -27,10 +27,22 @@ optimized model from the tutorials but take a closer look at the YOLO (You Only 
 Although, [GitHub](https://github.com/dusty-nv/jetson-inference) is the best place to familiarize users with coding on Jetson
 Nano. Image shown below presents a Jetson Nano device.
 
+</br>
+<p align="center">
+  <img width="460" height="450" src="img/jetson.png">
+</p>
+<p align="center">
+Figure 1. Jetson Nano module integrated in the board B01 
+</p>
+</br>
 
-<img src="img/jetson.png"
-     alt="Markdown Monster icon"
-     style="width: 300px; height: 300px; text-align: center;" />
+</br>
+<p align="center">
+  <img width="460" height="450" src="img/B01.png">
+</p>
+<p align="center">
+Figure 2. Board B01 designed by NVIDIA
+</p>
 </br>
 
 1. microSD card slot for main storage
@@ -42,7 +54,6 @@ Nano. Image shown below presents a Jetson Nano device.
 7. DisplayPort connector
 8. DC Barrel jack for 5V power input
 9. MIPI CSI camera connectors
-
 
 
 
@@ -103,11 +114,9 @@ labelled images or even image transformations like preprocessing and
 augmentation.
 
 </br>
-<center>
-<img src="img/labelling.jpg"
-     alt="Markdown Monster icon"
-     style="width: 300px; height: 300px; text-align: center;" /> </center>
-<p align=center> YOLOv5s batch size - 16, epochs - 100, training time - 10 minutes</p>
+<p align="center">
+  <img width="900" height="600" src="img/labelling.jpg">
+<p align=center> Figure 3. YOLOv5s batch_size: 16, epochs: 100, training time: 10 minutes</p>
 </br>
 
 ## Training
@@ -152,13 +161,13 @@ the area of taken into account shapes and is a good indicator of a loss function
 <img src="img/5s10min.png"
      alt="Markdown Monster icon"
      style="width: 100%; height: 300px; text-align: center;" />
-<p align=center>    Figure 1. YOLOv5s batch size - 16, epochs - 100, training time - 10 minutes</p>
+<p align=center>    Figure 4. YOLOv5s batch size - 16, epochs - 100, training time - 10 minutes</p>
 </br>
 
 <img src="img/5x22min.png"
      alt="Markdown Monster icon"
      style="width: 100%; height: 300px; text-align: center;" />
-<p align=center>     Figure 2. YOLOv5x batch size - 8, epochs - 100, training time - 22 minutes</p>
+<p align=center>     Figure 5. YOLOv5x batch size - 8, epochs - 100, training time - 22 minutes</p>
 </br>
 
 Whereas, mAP - mean Average Precision measures the accuracy of the examined
@@ -177,13 +186,13 @@ training time than the smaller one.
 <img src="img/5s2h30min.png"
      alt="Markdown Monster icon"
      style="width: 100%; height: 300px; text-align: center;" />
-<p align=center> Figure 3. YOLOv5s batch size - 32, epochs - 3000, training time - 2.25 hours</p>
+<p align=center> Figure 6. YOLOv5s batch size - 32, epochs - 3000, training time - 2.25 hours</p>
 </br>
 
 <img src="img/5x10h30min.png"
      alt="Markdown Monster icon"
      style="width: 100%; height: 300px; text-align: center;" />
-<p align=center>     Figure 4. YOLOv5x batch size - 6, epochs - 3000, training time - 10.5 hours </p>
+<p align=center>     Figure 7. YOLOv5x batch size - 6, epochs - 3000, training time - 10.5 hours </p>
 </br>
 
 
@@ -229,3 +238,24 @@ Yolov5s 100 epochs             |  Yolov5s 3000 epochs
 Yolov5x 100 epochs             |  Yolov5x 3000 epochs
 :-------------------------:|:-------------------------:
 ![Yolov5x 100 epochs](img/example_yolov5x100epochs.png)  |  ![Yolov5x 3000 epochs](img/example_yolov5x3000epochs.png)
+
+
+## Synthetic data generation
+
+Synthetic Data is the data generated through computer programs such as Blender, game engines such as Unity or dedicated synthetic-data-generation engines such as NVIDIA Omniverse Replicator. 
+
+</br>
+<p align="center">
+  <img width="460" height="450" src="img/Synthetic_data.png">
+</p>
+<p align="center">
+Figure 8. Synthetic Data usage in the future
+</p>
+</br>
+
+TODO LIST
+
+- [ ] Create / Apply 3D Model of the Coca-Cola bottle
+- [ ] Define custom scenes in Blender
+- [ ] Create script for random data generation
+- [ ] Create script to annotate images automatically
