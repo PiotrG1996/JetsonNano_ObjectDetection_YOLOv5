@@ -56,17 +56,15 @@ Figure 2. Board B01 designed by NVIDIA
 9. MIPI CSI camera connectors
 10. Antmicro project: [GitHub Link](https://github.com/antmicro/jetson-nano-baseboard)
 
-</br>
 <p align="center">
-  <img width="560" height="450" src="img/jetson-nano-baseboard.png">
+  <img width="660" height="450" src="img/jetson-nano-baseboard.png">
 </p>
 <p align="center">
-Figure 3. Jetson Nano module integrated on the Antmcro's baseboard 
+Figure 3. Jetson Nano module integrated on the Antmicro's baseboard 
 </p>
-</br>
 
 <p align="center">
-  <img width="900" height="650" src="img/jetson-nano-layout.png">
+  <img width="950" height="750" src="img/jetson-nano-layout.png">
 </p>
 <p align="center">
 Figure 4. Baseboard designed by Antmicro 
