@@ -223,7 +223,7 @@ python3 detect.py --source 0 --weights weights/yolov5s_cola.pt
 Where yolov5s_cola.pt is our weight file that determines the structure of neuron
 connections in a neural network. If there are no other peripherals connected to
 Jetson Nano, parameter --source 0 defines a default device. Python script
-detect.py invokes methods to run the interface on a web camera.
+detect.py invokes methods to run the inference on a web camera.
 
 ## Insights
 
