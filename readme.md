@@ -1,8 +1,6 @@
 # Custom object detection in real-time
 
-This project provides a custom object detector trained to
-detect plastic Coca-Cola bottles. It includes a general description of the YOLO algorithm applied on Jetson Nano platform as well as an explanation of creating a custom image dataset for training. The training process was done on a desktop machine while the implementation of the retrained model was tested on Jetson
-Nano.
+The main idea of this project is to present training methods based on [YoloV5](https://github.com/ultralytics/yolov5) neural network architecture. Project shows several ways to collect data, depicts entire training process based on gathered data (plastic Coca-Cola bottles) and run inference on [Jetson devices](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/). The training process was done on a desktop machine while the implementation of the retrained model was tested on Jetson Nano.
 
 ## Jetson Nano
 
@@ -12,11 +10,11 @@ machine learning and artificial intelligence. Capabilities offered out of the bo
 include peripherals dedicated directly to RaspberryPi and Adafruit. Thanks to the
 Nvidia jetpack SDK, every necessary software tool is already pre-installed on the
 Linux system, based on Ubuntu 18.04 distribution. Therefore, it is possible to
-benefit from tools like CUDA, TensorRT and cuDNN. It is worth noting that the
-cost of a small and relatively powerful device is around 99 Euro. There are also
-more expensive versions like Jetson TX1, Jetson TX2, Jetson Xavier NX and
-Jetson AGX Xavier.
-Official documentation with various code samples is available on GitHub [link](https://github.com/dusty-nv/jetson-inference).
+benefit from software packages and tools such as CUDA, TensorRT, cuDNN. It is worth noting that the
+cost of a small and relatively powerful device is around 99/59 Euro (4GB/2GB of RAM). There are also
+more expensive versions like Jetson TX1, Jetson TX2, Jetson Xavier NX,
+Jetson AGX Xavier, Jetson Orin.
+Official documentation with various code samples is available on the GitHub repository - [link](https://github.com/dusty-nv/jetson-inference).
 
 Dustin Franklin is a member of Nvidia Jetson Developers and provides a full
 repository on GitHub with dedicated software implementation on Jetson Nano.
@@ -38,7 +36,7 @@ Figure 1. Jetson Nano module integrated on the board B01
 
 </br>
 <p align="center">
-  <img width="800" height="450" src="img/B01.png">
+  <img width="650" height="350" src="img/B01.png">
 </p>
 <p align="center">
 Figure 2. Board B01 designed by NVIDIA
@@ -79,44 +77,60 @@ includes subfolders with images and labels. Images have been resized to 416x416
 pixels. The majority part of pictures contains
 only standing positions and fully filled coca-cola bottles.
 
+## Tips & Tricks for data labelling - Object Detection
+
+1. Create categories and specific label names (Category example "Plastic bottles", label names "Coca-Cola", "Pepsi" ...)
+2. Create tight bounding boxes
+3. Annotate all objects of interest
+4. Annotate occluded objects
+5. Annotate the entirety of an object
+6. Create clear annotation instructions
+7. Use good annotation tools
+
+The annotations for these tasks are in the form of bounding boxes and class names where the extreme coordinates of the bounding boxes and the class ID are set as the ground truth. This detection comes in the form of bounding boxes where the network detects the bounding box coordinates of each object and its corresponding class labels. [Guide to Image Annotation](https://www.v7labs.com/blog/image-annotation-guide)
+
 ## Directory structure
 
 Default directory structure consists of two main files: detect.py and train.py. The
 first one includes command options to parse arguments. It runs a chosen interface
 with determined data, weights, configuration etc. The other one loads data, sets
 hyperparameters, imports a yolo model and represents graph results either in
-Tensorboard or using matplotlib. Directory called weights includes as well
-individual models weights as the recently trained weights in specific .pt file
-extension. Directory called models includes default configuration files with .yaml
-extension. Two files have to be modified in order to train a custom dataset
-properly. Number of classes should be changed to one, because there is only one
-class of a coca-cola bottle. Besides, there are also necessary files to convert a
-Pytorch model into open standard [ONNX format](https://github.com/onnx/tutorials). Directory named utils
-includes additional files with created objects and defined methods used in the
-previously presented scripts. Eventually, all images are located in a directory
-called data. My decision was focused on simplifying this process of organising
-folders structure. For this purpose, I created a python script called create_data.py.
-It automatically divides gathered images with labels into separate directories and converts resolution of images.
+Tensorboard or using matplotlib. Directory __weights__ includes 
+individual model __weights.pt__ typical for PyTorch Framework. Directory called models includes default .yaml configuration files. These files must be modified in order to be trained properly on a custom dataset. Number of classes should be converted into a sigle one. It stands for only one category
+class of a Coca-Cola bottle. Besides this, several files need to be converted from a Pytorch model into Open Neural Network Exchange model [ONNX format](https://github.com/onnx/tutorials). 
+
+</br>
+<p align="center">
+  <img height="450" src="img/onnx.jpeg">
+</p>
+<p align="center">
+Figure 11. How to convert PyTorch to TensorFlow model?
+</p>
+</br>
+
+Directory __utils__ includes additional files with created and defined methods used in the
+previously presented scripts. Eventually, all images are located in a __data__ directory . My decision was focused on simplifying this process of organising folders structure. For this purpose, I created a python script called create_data.py.
+It automatically divides gathered images with labels into separate directories and converts resolution of the images.
+
 
 ## Dataset annotation
 
-The standard annotation for YOLO models is .yaml file. This is actually a
+The standard annotation for YOLO models is .yaml file and Darknet weights format. This is actually a
 configuration file which defines its architecture with parameters. All I had to do
 in the files yolov5s.yaml and yolov5x.yaml was change the number of classes in
 the second line of code. The essential file for the training is dataset.yaml which
 should be located in a directory with images in order to avoid chaos in this
-peculiar one with others. It includes paths for training and validation that should
-be modified. Furthermore, the number of classes contained in image folders
+peculiar one with others. It includes paths for training and validation which should
+be modified. Furthermore, the number of classes contained in the image folders
 should be adjusted into 1. However, the name for a specific object should be
-defined as Coca-Cola.
+defined as Coca-Cola. Example of COCO format (JSON) and its convertion into YOLO format (Darknet .txt) can be found under this [link](https://github.com/ultralytics/JSON2YOLO)
 
 ## Image labelling
 
 This is truly a time consuming part of the entire project. From the number of 250
 images, only 13 of them were destined for testing purposes without creating
 bounding boxes. For labelling images, I decided to use a web application
-[LabelBox](https://labelbox.com/). All resized images were uploaded by me, so that I could launch a
-label editor. There are several options to outline objects like polygon, bounding
+[LabelBox](https://labelbox.com/), I also recommand [Label Studio](https://labelstud.io/) - open source project made in Django framework. All resized images were uploaded by me, so that I could launch a label editor. There are several options to outline objects like polygon, bounding
 box, polilyne, point, entity, segmentation. After all images have been created with
 their bounding boxes, the next step is to download labelled files available either
 in .json or .csv extension. It was necessary to convert them into a specific yolo .txt
@@ -135,15 +149,9 @@ augmentation.
 ## Training
 
 In the case of YOLOv5, the training process is relatively easy to complete. After
-data preparation, it is requisite to run training script train.py. Everything
-including necessary commands is described step by step on my GitHub repository
-in readme.md file. This is the best way to reproduce all my results.
-Referring to the previous chapter, I have chosen two types of yolo models for
-training purposes. Both of them were pre-trained on a COCO dataset using
-NVIDIA Tesla P100 graphics card. The smallest one, YOLOv5s weight consists
+data preparation, it is requisite to run training script train.py. I decided to take advantage of transfer learning using checkpoints. Both of them were pre-trained on a COCO dataset (default GPU common in a research field is NVIDIA Tesla P100). The smallest one, YOLOv5s weight consists
 of 7.5 million parameters, on the other hand YOLOv5x consists of 89 million
-parameters.
-I decided to train a neural network four times to gain better understanding of the
+parameters. My results stand on to train four different a neural network  times to gain better understanding of the
 impact on the final training results. My first attempt at YOLOv5s was surprising.
 With a batch size equal to 16 and a number of epochs equal to 100, the whole
 training process on 237 images lasted only 10 minutes. In comparison, YOLOv5x
@@ -155,8 +163,7 @@ Overall, on the desktop machine (GTX 1080), YOLOv5s achieved a stable 100 FPS wh
 impressive and the other model YOLOv5x obtained a stable 30 FPS. The rapid
 training process encouraged me to repeat the experiment on more epochs.
 Therefore, both models have been set up to 3000 epochs with batch size equal to
-32 and 6 due to limitation of the memory allocation. All results from the training
-process are presented in the evaluation chapter.
+32 and 6 due to limitation of the memory allocation.
 
 ## Evaluation
 
@@ -271,6 +278,9 @@ TODO LIST
 Tool: [BlenderProc2](https://github.com/DLR-RM/BlenderProc)
 
 - [ ] Create / Apply 3D Model of the Coca-Cola bottle
+ - a) Create 3D Model using lidar & photogrammetry methods implemented in [Scaniverse iPhone 13 Pro](https://scaniverse.com/)
+ - b) Create 3D Model using depth camera (IR laser projector + RGB Camera) implemented in [RealSense D435](https://www.intelrealsense.com/depth-camera-d435i/)
 - [ ] Define custom scenes in Blender
+- [ ] Render example scene with applied 3D model
 - [ ] Create script for random data generation
 - [ ] Create script to annotate images automatically
