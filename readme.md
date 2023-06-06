@@ -259,6 +259,13 @@ Yolov5x 100 epochs             |  Yolov5x 3000 epochs
 :-------------------------:|:-------------------------:
 ![Yolov5x 100 epochs](img/example_yolov5x100epochs.png)  |  ![Yolov5x 3000 epochs](img/example_yolov5x3000epochs.png)
 
+</br>
+
+Transfer Learning Before   |  Transfer Learning After
+:-------------------------:|:-------------------------:
+![Before](img/Extended_model_YOLO_before.png)  |  ![After](img/Extended_model_YOLO.png)
+
+Please notice that after transfer learning has been applied, Coca-Cola bottle displayed on the laptop screen is considered both as water bottle and Coca-Cola bottle at the same time, due to low value of prediction in both cases.   
 
 ## Synthetic data generation
 
