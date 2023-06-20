@@ -3,7 +3,7 @@ numpy>=1.18.5
 opencv-python>=4.1.1
 Pillow>=7.1.2
 protobuf<=3.20.0
-pycocotools==2.0
+pycocotools==2.0.6
 pyparsing==2.4.7
 requests==2.23.0
 rsa==4.7
