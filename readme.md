@@ -267,6 +267,17 @@ Transfer Learning Before   |  Transfer Learning After
 
 Please notice that after transfer learning has been applied, the Coca-Cola bottle displayed on the laptop screen is considered both a water bottle and a Coca-Cola bottle at the same time, due to the low value of prediction in both cases.   
 
+
+</br>
+<p align="center">
+  <img width="900" height="450" src="img/Coca-Cola.gif">
+</p>
+<p align="center">
+Figure 10. Synthetic Data of Coca-Cola bottle
+</p>
+</br>
+
+
 ## Synthetic data generation
 
 Synthetic Data is the data generated through computer programs such as Blender, game engines such as Unity or dedicated synthetic-data-generation engines such as NVIDIA Omniverse Replicator. 
@@ -276,7 +287,7 @@ Synthetic Data is the data generated through computer programs such as Blender, 
   <img width="900" height="450" src="img/Synthetic_data.png">
 </p>
 <p align="center">
-Figure 10. Synthetic Data usage in the future
+Synthetic Data usage in the future
 </p>
 </br>
 
@@ -285,9 +296,11 @@ TODO LIST
 Tool: [BlenderProc2](https://github.com/DLR-RM/BlenderProc)
 
 - [x] Create / Apply a 3D Model of the Coca-Cola bottle
+- [x] New inference version Yolo V8 (https://github.com/ultralytics/ultralytics) 
  - a) Create 3D Model using lidar & photogrammetry methods implemented in [Scaniverse iPhone 13 Pro](https://scaniverse.com/)
  - b) Create 3D Model using depth camera (IR laser projector + RGB Camera) implemented in [RealSense D435](https://www.intelrealsense.com/depth-camera-d435i/)
 - [ ] Define custom scenes in Blender
 - [ ] Render example scene with applied 3D model
 - [ ] Create a script for random data generation
 - [ ] Create a script to annotate images automatically
+
