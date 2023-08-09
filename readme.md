@@ -11,19 +11,19 @@ include peripherals dedicated directly to RaspberryPi and Adafruit. Thanks to th
 Nvidia jetpack SDK, every necessary software tool is already pre-installed on the
 Linux system, based on Ubuntu 18.04 distribution. Therefore, it is possible to
 benefit from software packages and tools such as CUDA, TensorRT, cuDNN. It is worth noting that the
-cost of a small and relatively powerful device is around 99/59 Euro (4GB/2GB of RAM). There are also
+cost of a small and relatively powerful device is around 99€/59€ (4GB/2GB of RAM). There are also
 more expensive versions like Jetson TX1, Jetson TX2, Jetson Xavier NX,
 Jetson AGX Xavier, Jetson Orin.
 Official documentation with various code samples is available on the GitHub repository - [link](https://github.com/dusty-nv/jetson-inference).
 
-Dustin Franklin is a member of Nvidia Jetson Developers and provides a full
+Dustin Franklin is a member of Nvidia Jetson Developers and provides a complete
 repository on GitHub with dedicated software implementation on Jetson Nano.
 Every specific problem regarding Jetson Nano can be reported in the issues
 section. In this project, I decided not to apply any pre-trained and
 optimized model from the tutorials but take a closer look at the YOLO (You Only Look Once) algorithm.
 
 Although, [GitHub](https://github.com/dusty-nv/jetson-inference) is the best place to familiarize users with coding on Jetson
-Nano. Image shown below presents a Jetson Nano device.
+Nano. The image shown below presents a Jetson Nano device.
 
 </br>
 <p align="center">
@@ -70,12 +70,12 @@ Figure 4. Baseboard designed by Antmicro
 
 ## Image dataset
 
-Collection of 250 coca-cola
-images includes different position variants and backgrounds. The images are
+Collection of 250 Coca-Cola
+images include different position variants and backgrounds. The images are
 divided into three folders: test 5%, train 70% and valid 25%. Each of them
 includes subfolders with images and labels. Images have been resized to 416x416
-pixels. The majority part of pictures contains
-only standing positions and fully filled coca-cola bottles.
+pixels. The majority part of the pictures contain
+only standing positions and fully filled Coca-Cola bottles.
 
 ## Tips & Tricks for data labelling - Object Detection
 
@@ -91,12 +91,12 @@ The annotations for these tasks are in the form of bounding boxes and class name
 
 ## Directory structure
 
-Default directory structure consists of two main files: detect.py and train.py. The
+The default directory structure consists of two main files: detect.py and train.py. The
 first one includes command options to parse arguments. It runs a chosen interface
 with determined data, weights, configuration etc. The other one loads data, sets
-hyperparameters, imports a yolo model and represents graph results either in
+hyperparameters, imports a Yolo model and represents graph results either in
 Tensorboard or using matplotlib. Directory __weights__ includes 
-individual model __weights.pt__ typical for PyTorch Framework. Directory called models includes default .yaml configuration files. These files must be modified in order to be trained properly on a custom dataset. Number of classes should be converted into a sigle one. It stands for only one category
+individual model __weights.pt__ typical for PyTorch Framework. A directory called models includes default .yaml configuration files. These files must be modified in order to be trained properly on a custom dataset. The number of classes should be converted into a single one. It stands for only one category
 class of a Coca-Cola bottle. Besides this, several files need to be converted from a Pytorch model into Open Neural Network Exchange model [ONNX format](https://github.com/onnx/tutorials). 
 
 </br>
@@ -104,34 +104,34 @@ class of a Coca-Cola bottle. Besides this, several files need to be converted fr
   <img height="450" src="img/onnx.jpeg">
 </p>
 <p align="center">
-Figure 11. How to convert PyTorch to TensorFlow model?
+Figure 11. How to convert PyTorch to a TensorFlow model?
 </p>
 </br>
 
 Directory __utils__ includes additional files with created and defined methods used in the
-previously presented scripts. Eventually, all images are located in a __data__ directory . My decision was focused on simplifying this process of organising folders structure. For this purpose, I created a python script called create_data.py.
-It automatically divides gathered images with labels into separate directories and converts resolution of the images.
+previously presented scripts. Eventually, all images are located in a __data__ directory. My decision was focused on simplifying this process of organising folder structure. For this purpose, I created a Python script called create_data.py.
+It automatically divides gathered images with labels into separate directories and converts the resolution of the images.
 
 
 ## Dataset annotation
 
-The standard annotation for YOLO models is .yaml file and Darknet weights format. This is actually a
+The standard annotation for YOLO models is a .yaml file and Darknet weights format. This is actually a
 configuration file which defines its architecture with parameters. All I had to do
 in the files yolov5s.yaml and yolov5x.yaml was change the number of classes in
-the second line of code. The essential file for the training is dataset.yaml which
+the second line of code. The essential file for the training is dataset .yaml which
 should be located in a directory with images in order to avoid chaos in this
 peculiar one with others. It includes paths for training and validation which should
 be modified. Furthermore, the number of classes contained in the image folders
-should be adjusted into 1. However, the name for a specific object should be
-defined as Coca-Cola. Example of COCO format (JSON) and its convertion into YOLO format (Darknet .txt) can be found under this [link](https://github.com/ultralytics/JSON2YOLO)
+should be adjusted to 1. However, the name for a specific object should be
+defined as Coca-Cola. An example of COCO format (JSON) and its conversion into YOLO format (Darknet .txt) can be found under this [link](https://github.com/ultralytics/JSON2YOLO)
 
 ## Image labelling
 
-This is truly a time consuming part of the entire project. From the number of 250
+This is truly a time-consuming part of the entire project. From the number of 250
 images, only 13 of them were destined for testing purposes without creating
 bounding boxes. For labelling images, I decided to use a web application
-[LabelBox](https://labelbox.com/), I also recommand [Label Studio](https://labelstud.io/) - open source project made in Django framework. All resized images were uploaded by me, so that I could launch a label editor. There are several options to outline objects like polygon, bounding
-box, polilyne, point, entity, segmentation. After all images have been created with
+[LabelBox](https://labelbox.com/), I also recommend [Label Studio](https://labelstud.io/) - open source project made in Django framework. All resized images were uploaded by me so that I could launch a label editor. There are several options to outline objects like polygon, bounding
+box, polyline, point, entity, and segmentation. After all, images have been created with
 their bounding boxes, the next step is to download labelled files available either
 in .json or .csv extension. It was necessary to convert them into a specific yolo .txt
 file before training. Therefore I uploaded everything on [Roboflow](https://roboflow.ai/). This is a
@@ -149,13 +149,13 @@ augmentation.
 ## Training
 
 In the case of YOLOv5, the training process is relatively easy to complete. After
-data preparation, it is requisite to run training script train.py. I decided to take advantage of transfer learning using checkpoints. Both of them were pre-trained on a COCO dataset (default GPU common in a research field is NVIDIA Tesla P100). The smallest one, YOLOv5s weight consists
-of 7.5 million parameters, on the other hand YOLOv5x consists of 89 million
-parameters. My results stand on to train four different a neural network  times to gain better understanding of the
+data preparation, it is requisite to run the training script train.py. I decided to take advantage of transfer learning using checkpoints. Both of them were pre-trained on a COCO dataset (default GPU common in a research field is NVIDIA Tesla P100). The smallest one, YOLOv5s weight consists
+of 7.5 million parameters, on the other hand, YOLOv5x consists of 89 million
+parameters. My results stand on to train four different neural network  times to gain a better understanding of the
 impact on the final training results. My first attempt at YOLOv5s was surprising.
 With a batch size equal to 16 and a number of epochs equal to 100, the whole
 training process on 237 images lasted only 10 minutes. In comparison, YOLOv5x
-training with the batch size 8 (due to a problem with memory allocation) lasted
+training with batch size 8 (due to a problem with memory allocation) lasted
 22 minutes. My second training session was set up to 3000 epochs. In this case,
 training time was not proportionally equal. The bigger model was training for 10
 hours and 30 minutes, while the smaller one only for 2 hours and 15 minutes.
@@ -163,18 +163,18 @@ Overall, on the desktop machine (GTX 1080), YOLOv5s achieved a stable 100 FPS wh
 impressive and the other model YOLOv5x obtained a stable 30 FPS. The rapid
 training process encouraged me to repeat the experiment on more epochs.
 Therefore, both models have been set up to 3000 epochs with batch size equal to
-32 and 6 due to limitation of the memory allocation.
+32 and 6 due to the limitation of the memory allocation.
 
 ## Evaluation
 
 The Impressive part is that it takes only 10 minutes for a neural network to learn
-and recognize the Coca-Cola pattern in the process of training. Images below present Generalized Intersection over Union and objectiveness for both training and validation data, detecting precision with recall, mean Average Precision.
+and recognize the Coca-Cola pattern in the process of training. Images below present a Generalized Intersection over Union and objectiveness for both training and validation data, detecting precision with recall, and mean Average Precision.
 
 
 In this scenario, I decided to discuss only GIoU and mAP. GIoU is one of the
 most common evaluation metrics applied in object detection. In general, it defines
-the area of taken into account shapes and is a good indicator of a loss function
-[more details](https://giou.stanford.edu/GIoU.pdf). Epoch number of 100 seems insufficient to decrease it below value of 0.02.
+the area taken into account shapes and is a good indicator of a loss function
+[more details](https://giou.stanford.edu/GIoU.pdf). Epoch number of 100 seems insufficient to decrease it below the value of 0.02.
 
 </br>
 
@@ -196,8 +196,8 @@ defined as a correctly predicted percentage of images.
 
 Furthermore, recall only
 measures positive cases from the prediction. Average Precision is an integral of
-the area under precision-recall curve. In other words, it defines accuracy of the
-trained model. As well figure 3. as figure 4. presents successfully trained models.
+the area under the precision-recall curve. In other words, it defines the accuracy of the
+trained model. As well figure 3. as Figure 4. presents successfully trained models.
 The difference is that the larger architecture of YOLO demands 5 times more
 training time than the smaller one.
 
@@ -216,10 +216,10 @@ training time than the smaller one.
 </br>
 
 
-## Implementation on Jetson Nano
+## Implementation of Jetson Nano
 
 To implement pre-trained models, it is necessary to copy the file with weights
-called last.pt. This should be pasted in the project with weights directory on
+called _last.pt_. This should be pasted in the project with the weights directory on
 Jetson Nano. In order to run and check out pre-trained object detector in live-time
 on a web camera, type the following command:
 
@@ -237,12 +237,12 @@ detect.py invokes methods to run the inference on a web camera.
 Tests done on Jetson Nano demonstrated practical usage on this embedded
 platform. Accuracy remains generally the same either on a desktop machine or
 Jetson Nano device. The only significant difference is the speed performance.
-Stable 100 fps using a small version of yolov5 and 30 fps of extra-large version
+Stable 100 fps using a small version of yolov5 and 30 fps of the extra-large version
 dropped down respectively to 15 fps on yolov5s and 1.6 fps on yolov5x. This
 showcase makes an enormous difference by matching 472 GFLOPs on Jetson
 Nano GPU to 8873 GFLOPs on Nvidia GTX 1080 graphics card.
 
-Additionally, I noticed that by the increasing numbers of iterations during
+Additionally, I noticed that by the increasing number of iterations during
 training, the tendency of detecting is focused only on the entire object. In other
 words, it is going to detect only fully filled 1.25l Coca-Cola plastic bottles with
 high precision, because all images consisted of this object sort.
@@ -265,7 +265,7 @@ Transfer Learning Before   |  Transfer Learning After
 :-------------------------:|:-------------------------:
 ![Before](img/Extended_model_YOLO_before.png)  |  ![After](img/Extended_model_YOLO.png)
 
-Please notice that after transfer learning has been applied, Coca-Cola bottle displayed on the laptop screen is considered both as water bottle and Coca-Cola bottle at the same time, due to low value of prediction in both cases.   
+Please notice that after transfer learning has been applied, the Coca-Cola bottle displayed on the laptop screen is considered both a water bottle and a Coca-Cola bottle at the same time, due to the low value of prediction in both cases.   
 
 ## Synthetic data generation
 
@@ -284,10 +284,10 @@ TODO LIST
 
 Tool: [BlenderProc2](https://github.com/DLR-RM/BlenderProc)
 
-- [ ] Create / Apply 3D Model of the Coca-Cola bottle
+- [x] Create / Apply a 3D Model of the Coca-Cola bottle
  - a) Create 3D Model using lidar & photogrammetry methods implemented in [Scaniverse iPhone 13 Pro](https://scaniverse.com/)
  - b) Create 3D Model using depth camera (IR laser projector + RGB Camera) implemented in [RealSense D435](https://www.intelrealsense.com/depth-camera-d435i/)
 - [ ] Define custom scenes in Blender
 - [ ] Render example scene with applied 3D model
-- [ ] Create script for random data generation
-- [ ] Create script to annotate images automatically
+- [ ] Create a script for random data generation
+- [ ] Create a script to annotate images automatically
