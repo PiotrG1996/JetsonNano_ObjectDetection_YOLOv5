@@ -270,7 +270,7 @@ Please notice that after transfer learning has been applied, the Coca-Cola bottl
 
 </br>
 <p align="center">
-  <img width="900" height="450" src="img/Coca-Cola.gif">
+  <img width="700" height="550" src="img/Coca-Cola.gif">
 </p>
 <p align="center">
 Figure 10. Synthetic Data of Coca-Cola bottle
