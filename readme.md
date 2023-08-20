@@ -1,13 +1,12 @@
 # Custom object detection in real-time
 
-The main idea of this project is to present training methods based on [YoloV5](https://github.com/ultralytics/yolov5) neural network architecture. Project shows several ways to collect data, depicts entire training process based on gathered data (plastic Coca-Cola bottles) and run inference on [Jetson devices](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/). The training process was done on a desktop machine while the implementation of the retrained model was tested on Jetson Nano.
+The main idea of this project is to present training methods based on [YoloV5](https://github.com/ultralytics/yolov5) neural network architecture. This project shows several ways to collect data, depicts the entire training process based on gathered data (plastic Coca-Cola bottles) and runs inference on [Jetson devices](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/). The training process was done on a desktop machine while the implementation of the retrained model benchmark was done on Jetson Nano using an official repository of [YoloV5](https://docs.ultralytics.com/yolov5/tutorials/running_on_jetson_nano/#before-you-start) .
 
 ## Jetson Nano
 
-Jetson Nano is an AI single-board computer for embedded developers. This small
-size embedded system is designed for prototyping solutions in the field of
+Jetson Nano is an AI single-board computer for embedded developers. This small-size embedded system is designed for prototyping solutions in the field of
 machine learning and artificial intelligence. Capabilities offered out of the box
-include peripherals dedicated directly to RaspberryPi and Adafruit. Thanks to the
+include peripherals dedicated directly to [Raspberry Pi](https://www.raspberrypi.org/) and [Adafruit](https://www.adafruit.com/). Thanks to the
 Nvidia jetpack SDK, every necessary software tool is already pre-installed on the
 Linux system, based on Ubuntu 18.04 distribution. Therefore, it is possible to
 benefit from software packages and tools such as CUDA, TensorRT, cuDNN. It is worth noting that the
