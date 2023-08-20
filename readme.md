@@ -299,8 +299,8 @@ Tool: [BlenderProc2](https://github.com/DLR-RM/BlenderProc)
 - [x] New inference version [Yolo V8](https://github.com/ultralytics/ultralytics) 
  - a) Create 3D Model using lidar & photogrammetry methods implemented in [Scaniverse iPhone 13 Pro](https://scaniverse.com/)
  - b) Create 3D Model using depth camera (IR laser projector + RGB Camera) implemented in [RealSense D435](https://www.intelrealsense.com/depth-camera-d435i/)
-- [ ] Define custom scenes in Blender
-- [ ] Render example scene with applied 3D model
+- [x] Define custom scenes in [Blender](https://github.com/PiotrG1996/Blender)
+- [x] Render example scene with applied [3D model](https://github.com/PiotrG1996/Blender/blob/main/image/Cola.gif)
 - [ ] Create a script for random data generation
 - [ ] Create a script to annotate images automatically
 
