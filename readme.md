@@ -103,7 +103,7 @@ class of a Coca-Cola bottle. Besides this, several files need to be converted fr
   <img height="450" src="img/onnx.jpeg">
 </p>
 <p align="center">
-Figure 11. How to convert PyTorch to a TensorFlow model?
+Figure 5. How to convert PyTorch to a TensorFlow model?
 </p>
 </br>
 
@@ -142,7 +142,7 @@ augmentation.
 </br>
 <p align="center">
   <img width="900" height="600" src="img/labelling.jpg">
-<p align=center> Figure 5. YOLOv5s batch_size: 16, epochs: 100, training time: 10 minutes</p>
+<p align=center> Figure 6. Creation of new labels for a Coca-Cola class with id "0"</p>
 </br>
 
 ## Training
@@ -152,7 +152,7 @@ data preparation, it is requisite to run the training script train.py. I decided
 of 7.5 million parameters, on the other hand, YOLOv5x consists of 89 million
 parameters. My results stand on to train four different neural network  times to gain a better understanding of the
 impact on the final training results. My first attempt at YOLOv5s was surprising.
-With a batch size equal to 16 and a number of epochs equal to 100, the whole
+With a batch size equal to 16 and number of epochs equal to 100, the whole
 training process on 237 images lasted only 10 minutes. In comparison, YOLOv5x
 training with batch size 8 (due to a problem with memory allocation) lasted
 22 minutes. My second training session was set up to 3000 epochs. In this case,
