@@ -264,7 +264,7 @@ Transfer Learning Before   |  Transfer Learning After
 :-------------------------:|:-------------------------:
 ![Before](img/Extended_model_YOLO_before.png)  |  ![After](img/Extended_model_YOLO.png)
 
-Please notice that after transfer learning has been applied, the Coca-Cola bottle displayed on the laptop screen is considered both a water bottle and a Coca-Cola bottle at the same time, due to the low value of prediction in both cases.   
+Please notice that after transfer learning has been applied, the Coca-Cola bottle displayed on the laptop screen is considered both as a water bottle and as a Coca-Cola bottle at the same time. Due to the low prediction value in both cases.   
 
 
 </br>
