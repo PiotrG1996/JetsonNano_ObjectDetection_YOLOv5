@@ -290,11 +290,8 @@ Synthetic Data is the data generated through computer programs such as Blender, 
 </p>
 </br>
 
-## Data generation example - 3D model in .stl format
 
-![example](img/Cola.gif)
-
-## 2. How to create more synthetic data
+## How to create more synthetic data
 
 - Open Blender file named Create_model.blend
   
@@ -314,6 +311,12 @@ Example 3              |  Example 4
 
 TODO:
 - [ ] Fix issue with the wrong mesh textures. 
+
+
+## How to debug in VS CODE scripts written in Python [ [BLENDER](https://github.com/AlansCodeLog/blender-debugger-for-vscode) ]
+
+![https://github.com/AlansCodeLog/blender-debugger-for-vscode](img/debug-vscode.png)
+
 
 # Blender Script Unit Tests
 
