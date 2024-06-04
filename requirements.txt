@@ -2,7 +2,7 @@ matplotlib==3.5.1  # Update to a compatible version with Python 3.10
 numpy>=1.21.0  # Use a version compatible with Python 3.10
 opencv-python>=4.5.4  # Update to a compatible version with Python 3.10
 Pillow>=8.4.0  # Update to a compatible version with Python 3.10
-protobuf==3.20.0  # Fix version to ensure compatibility
+protobuf==3.20.2  # Fix version to ensure compatibility
 pycocotools==2.0.2  # Use a specific compatible version
 pyparsing==3.0.7  # Update to a compatible version with Python 3.10
 requests>=2.26.0  # Use a version compatible with Python 3.10
