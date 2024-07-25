@@ -11,7 +11,7 @@ scipy>=1.7.3  # Use a version compatible with Python 3.10
 six==1.16.0  # Update to a compatible version with Python 3.10
 tensorboard==2.7.0  # Update to a compatible version with Python 3.10
 tensorboard-plugin-wit==1.8.0  # Update to a compatible version with Python 3.10
-torch==1.10.0  # Use a version compatible with Python 3.10
+torch==2.2.0  # Use a version compatible with Python 3.10
 torchvision==0.11.1  # Update to a compatible version with Python 3.10
 tqdm>=4.62.3  # Use a version compatible with Python 3.10
 urllib3>=1.26.7  # Use a version compatible with Python 3.10
