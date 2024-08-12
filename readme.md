@@ -315,7 +315,7 @@ TODO:
 
 ## How to debug in VS CODE scripts written in Python [ [BLENDER](https://github.com/AlansCodeLog/blender-debugger-for-vscode) ]
 
-![https://github.com/AlansCodeLog/blender-debugger-for-vscode](img/debug-vscode.png)
+![BLENDER](img/blender_example.png)
 
 
 # Blender Script Unit Tests
